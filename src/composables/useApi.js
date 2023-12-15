@@ -5,7 +5,7 @@ const recipes = ref([])
 const pages = ref(1)
 const loading = ref(false)
 const activePage = ref(1)
-const pageSize = ref(8)
+const pageSize = ref(12)
 const currentRecipe = ref('null')
 
 const api = axios.create({
