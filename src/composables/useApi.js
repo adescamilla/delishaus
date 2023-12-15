@@ -6,6 +6,7 @@ const pages = ref(1)
 const loading = ref(false)
 const activePage = ref(1)
 const pageSize = ref(8)
+const currentRecipe = ref('null')
 
 const api = axios.create({
   baseURL: import.meta.env.VITE_API_URL,
@@ -28,13 +29,19 @@ const getRecipes = async () => {
   loading.value = false
 }
 
+const fetchRecipe= async (id) => {
+    const { data } = await api.get(`/api/recipes/${id}`)
+    currentRecipe.value = data
+    console.log(data)
+}
+  
 const getRecipe = async (recipeID) => {
   const { data } = await api.get(`/api/recipes/${recipeID}`)
   return data
 }
 
 const useApi = () => {
-  return { recipes, pages, activePage, loading, pageSize, getRecipes, getRecipe }
+  return { recipes, pages, activePage, loading, pageSize, getRecipes, getRecipe, fetchRecipe, currentRecipe }
 }
 
 export default useApi
