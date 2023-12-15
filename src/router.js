@@ -5,12 +5,14 @@ import MainPage from '@/components/MainPage.vue'
 import LoginPage from '@/components/LoginPage.vue'
 import SettingsPage from '@/components/SettingsPage.vue'
 import NotFound from '@/components/NotFound.vue'
+import RecipePage from '@/components/RecipesPage.vue'
 
 const routes = [
   { path: '/final2023/', name: 'Home', component: MainPage },
   { path: '/login', name: 'Login', component: LoginPage },
   { path: '/settings', name: 'Settings', component: SettingsPage, meta: { requiresAuth: true } },
   { path: '/:pathMatch(.*)*', name: 'NotFound', component: NotFound },
+  { path: '/api/recipes/:id', name: 'Recipe', component: RecipePage },
 ]
 
 const router = createRouter({

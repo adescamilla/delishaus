@@ -19,7 +19,6 @@
   <div v-else class="wrapper">
     <MainSearch />
     <MainCards />
-    <MainPagination />
   </div>
 </template>
 

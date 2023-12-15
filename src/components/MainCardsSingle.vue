@@ -50,11 +50,11 @@
     }
     &-details {
       @apply flex flex-col gap-2  pt-6 text-center;
-      &-name {
-        @apply text-3xl font-thin  tracking-wider text-slate-800;
+      &-recipe {
+        @apply text-3xl font-bold  tracking-normal text-cyan-900;
       }
-      &-job {
-        @apply -mt-2 text-xs font-bold text-yellow-700;
+      &-type {
+        @apply -mt-2 text-xs font-bold text-orange-600;
       }
       &-quote {
         @apply pt-4 text-lg italic text-slate-800;

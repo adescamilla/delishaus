@@ -28,8 +28,13 @@ const getRecipes = async () => {
   loading.value = false
 }
 
+const getRecipe = async (recipeID) => {
+  const { data } = await api.get(`/api/recipes/${recipeID}`)
+  return data
+}
+
 const useApi = () => {
-  return { recipes, pages, activePage, loading, pageSize, getRecipes }
+  return { recipes, pages, activePage, loading, pageSize, getRecipes, getRecipe }
 }
 
 export default useApi
