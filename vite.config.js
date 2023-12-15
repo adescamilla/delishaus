@@ -6,7 +6,7 @@ import path from 'path'
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  base: '/final2023/',
+  base: '/delishaus/',
   plugins: [vue()],
   resolve: {
     alias: {
